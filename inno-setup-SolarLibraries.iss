@@ -15,7 +15,7 @@ AppSupportURL=http://www.b-com.com/
 AppUpdatesURL=http://www.b-com.com/
 DefaultDirName={sd}\SolARFramework
 DefaultGroupName=SolARFramework
-LicenseFile=C:\Users\atadrist\BCOM\SolAR\sources-forge\SolARFramework\LICENSE
+LicenseFile=.\installeurs\LICENSE
 OutputBaseFilename=SolarFramework-installer
 SetupIconFile=C:\Users\atadrist\BCOM\SolAR\solar.ico
 UninstallFilesDir={app}\uninst
@@ -35,12 +35,12 @@ Name: "Samples"; Description: "Sample code"; Types: full
 
 ; source files included inside the installer
 [Files]
-Source: "K:\tmp\azdine\SolarSetup\installeurs\SolARLibraries\bcomBuild\*"; DestDir: "{app}\SolARLibraries\bcomBuild"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "SolARlibraries"
-Source: "K:\tmp\azdine\SolarSetup\installeurs\forQT-only\Setup_pkg-config.exe"; DestDir: "{app}\uninst"; AfterInstall: RunOtherInstaller; Components: "QTinstallation"
-Source: "K:\tmp\azdine\SolarSetup\installeurs\forQT-only\pkg-config_Uninstall.exe"; DestDir: "{app}\uninst"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "QTinstallation"
-Source: "K:\tmp\azdine\Solar-20180116\builddefs\*"; DestDir: "{app}\SolARLibraries\builddefs"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "QTinstallation"
-Source: "K:\tmp\azdine\SolarSetup\installeurs\thirdParties\thirdParties\*"; DestDir: "{app}\SolARLibraries\thirdParties"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties"
-Source: "K:\tmp\azdine\SolarSetup\installeurs\Samples\*"; DestDir: "{app}\Samples"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "Samples"
+Source: ".\installeurs\SolARLibraries\bcomBuild\*"; DestDir: "{app}\SolARLibraries\bcomBuild"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "SolARlibraries"
+Source: ".\installeurs\forQT-only\Setup_pkg-config.exe"; DestDir: "{app}\uninst"; AfterInstall: RunOtherInstaller; Components: "QTinstallation"
+Source: ".\installeurs\forQT-only\pkg-config_Uninstall.exe"; DestDir: "{app}\uninst"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "QTinstallation"
+Source: ".\installeurs\builddefs\*"; DestDir: "{app}\SolARLibraries\builddefs"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "QTinstallation"
+Source: ".\installeurs\thirdParties\thirdParties\*"; DestDir: "{app}\SolARLibraries\thirdParties"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties"
+Source: ".\installeurs\Samples\*"; DestDir: "{app}\Samples"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "Samples"
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
