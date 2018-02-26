@@ -1,4 +1,4 @@
-opencv|3.2.0|opencv|thirdParties|https://forge.b-com.com/www/argo/binaries
+opencv|3.2.0|opencv|thirdParties|http://repository.b-com.com/argo-generic
 boost|1.64.0|boost|thirdParties|https://github.com/SolarFramework/binaries/releases/download
 xpcf|1.0.0|xpcf|thirdParties|https://github.com/SolarFramework/binaries/releases/download
 spdlog|0.14.0|spdlog|thirdParties|https://github.com/SolarFramework/binaries/releases/download
