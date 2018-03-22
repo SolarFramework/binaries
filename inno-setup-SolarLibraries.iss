@@ -7,8 +7,8 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{04CC0EF2-35C2-4E1E-9DAD-2F34B67F6273}
 AppName=SolARFramework
-AppVersion=0.2
-;AppVerName=SolARFramework 0.2
+AppVersion=0.3
+;AppVerName=SolARFramework 0.3
 AppPublisher=b<>com
 AppPublisherURL=http://www.b-com.com/
 AppSupportURL=http://www.b-com.com/
@@ -17,7 +17,7 @@ DefaultDirName={sd}\SolARFramework
 DefaultGroupName=SolARFramework
 LicenseFile=.\installeurs\LICENSE
 OutputBaseFilename=SolarFramework-installer
-SetupIconFile=C:\Users\atadrist\BCOM\SolAR\solar.ico
+SetupIconFile=.\installeurs\solar.ico
 UninstallFilesDir={app}\uninst
 Compression=lzma/fast
 ; Tell Windows Explorer to reload the environment
