@@ -4,3 +4,4 @@ xpcf|2.0.1|xpcf|thirdParties|https://github.com/SolarFramework/binaries/releases
 spdlog|0.14.0|spdlog|thirdParties|https://github.com/SolarFramework/binaries/releases/download
 eigen|3.3.4|eigen|thirdParties|https://github.com/SolarFramework/binaries/releases/download
 freeglut|3.0.0|freeglut|thirdParties|https://github.com/SolarFramework/binaries/releases/download
+fbow|0.0.1|fbow|thirdParties|https://github.com/SolarFramework/binaries/releases/download
