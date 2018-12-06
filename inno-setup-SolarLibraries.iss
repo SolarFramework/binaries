@@ -7,8 +7,8 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{04CC0EF2-35C2-4E1E-9DAD-2F34B67F6273}
 AppName=SolARFramework
-AppVersion=0.3
-;AppVerName=SolARFramework 0.3
+AppVersion=0.5
+;AppVerName=SolARFramework 0.5
 AppPublisher=b<>com
 AppPublisherURL=http://www.b-com.com/
 AppSupportURL=http://www.b-com.com/
@@ -31,7 +31,28 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "SolARlibraries"; Description: "SolAR libraries"; Types: full
 Name: "QTinstallation"; Description: "QT creator dependencies"; Types: full
 Name: "ThirdParties"; Description: "Third Party libraries"; Types: full
-Name: "Samples"; Description: "Sample code"; Types: full
+Name: "ThirdParties\boost"; Description: "Boost 1.68.0"; Types: full
+Name: "ThirdParties\eigen"; Description: "Eigen 3.3.5"; Types: full
+Name: "ThirdParties\fbow"; Description: "FBow 0.0.1"; Types: full
+Name: "ThirdParties\freeglut"; Description: "Freeglut 3.0.0"; Types: full
+Name: "ThirdParties\opencv"; Description: "OpenCV 3.4.3"; Types: full
+Name: "ThirdParties\spdlog"; Description: "Spdlog 0.14.0"; Types: full
+Name: "ThirdParties\xpcf"; Description: "Xpcf 2.1.0"; Types: full
+Name: "sources"; Description: "sources"; Types: full
+Name: "sources\SolARFramework"; Description: "SolAR Framework"; Types: full
+Name: "sources\Modules"; Description: "SolAR Modules"; Types: full
+Name: "sources\Modules\SolARModuleOpenCV"; Description: "SolARModuleOpenCV Module"; Types: full
+Name: "sources\Modules\SolARModuleNonFreeOpenCV"; Description: "SolARModuleNonFreeOpenCV Modules"; Types: full
+Name: "sources\Modules\SolARModuleFBOW"; Description: "SolARModuleOpenCV Module"; Types: full
+Name: "sources\Modules\SolARModuleOpenGL"; Description: "SolARModuleOpenCV Module"; Types: full
+Name: "sources\Modules\SolARModuleTools"; Description: "SolARModuleOpenCV Module"; Types: full
+Name: "sources\Samples"; Description: "SolAR Samples"; Types: full
+Name: "sources\Samples\FiducialMarker"; Description: "Fiducial Marker Sample"; Types: full
+Name: "sources\Samples\NaturalImage"; Description: "Natural Image Sample"; Types: full
+Name: "sources\Samples\Slam"; Description: "Slam Sample"; Types: full
+Name: "sources\Samples\Triangulation"; Description: "Triangulation Sample"; Types: full
+Name: "buildscripts"; Description: "Build scripts"; Types: full
+
 
 ; source files included inside the installer
 [Files]
@@ -39,8 +60,33 @@ Source: ".\installeurs\SolARLibraries\bcomBuild\*"; DestDir: "{app}\SolARLibrari
 Source: ".\installeurs\forQT-only\Setup_pkg-config.exe"; DestDir: "{app}\uninst"; AfterInstall: RunOtherInstaller; Components: "QTinstallation"
 Source: ".\installeurs\forQT-only\pkg-config_Uninstall.exe"; DestDir: "{app}\uninst"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "QTinstallation"
 Source: ".\installeurs\builddefs\*"; DestDir: "{app}\SolARLibraries\builddefs"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "QTinstallation"
-Source: ".\installeurs\thirdParties\thirdParties\*"; DestDir: "{app}\SolARLibraries\thirdParties"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties"
-Source: ".\installeurs\Samples\*"; DestDir: "{app}\Samples"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "Samples"
+
+Source: ".\installeurs\thirdParties\*"; DestDir: "{app}\SolARLibraries\thirdParties"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties"
+Source: ".\installeurs\thirdParties\boost"; DestDir: "{app}\SolARLibraries\thirdParties\boost"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties\boost"
+Source: ".\installeurs\thirdParties\eigen"; DestDir: "{app}\SolARLibraries\thirdParties\eigen"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties\eigen"
+Source: ".\installeurs\thirdParties\fbow"; DestDir: "{app}\SolARLibraries\thirdParties\fbow"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties\fbow"
+Source: ".\installeurs\thirdParties\freeglut"; DestDir: "{app}\SolARLibraries\thirdParties\freeglut"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties\freeglut"
+Source: ".\installeurs\thirdParties\opencv"; DestDir: "{app}\SolARLibraries\thirdParties\opencv"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties\opencv"
+Source: ".\installeurs\thirdParties\spdlog"; DestDir: "{app}\SolARLibraries\thirdParties\spdlog"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties\spdlog"
+Source: ".\installeurs\thirdParties\xpcf"; DestDir: "{app}\SolARLibraries\thirdParties\xpcf"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties\xpcf"
+
+
+Source: ".\installeurs\sources\*"; DestDir: "{app}\sources"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources"
+Source: ".\installeurs\sources\SolARFramework"; DestDir: "{app}\sources\SolARFramework"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\SolARFramework"
+Source: ".\installeurs\sources\Modules\*"; DestDir: "{app}\sources\Modules"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\Modules"
+Source: ".\installeurs\sources\Modules\SolARModuleOpenCV"; DestDir: "{app}\sources\Modules\SolARModuleOpenCV"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources"
+Source: ".\installeurs\sources\Modules\SolARModuleNonFreeOpenCV"; DestDir: "{app}\sources\Modules\SolARModuleNonFreeOpenCV"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources"
+Source: ".\installeurs\sources\Modules\SolARModuleFBOW"; DestDir: "{app}\sources\Modules\SolARModuleFBOW"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources"
+Source: ".\installeurs\sources\Modules\SolARModuleOpenGL"; DestDir: "{app}\sources\Modules\SolARModuleOpenGL"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources"
+Source: ".\installeurs\sources\Modules\SolARModuleTools"; DestDir: "{app}\sources\Modules\SolARModuleTools"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources"
+Source: ".\installeurs\sources\Samples\*"; DestDir: "{app}\sources\Samples"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\Samples"
+Source: ".\installeurs\sources\Samples\FiducialMarker"; DestDir: "{app}\sources\Samples\FiducialMarker"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\Samples\FiducialMarker"
+Source: ".\installeurs\sources\Samples\NaturalImageMarker"; DestDir: "{app}\sources\Samples\NaturalImageMarker"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\Samples\NaturalImage"
+Source: ".\installeurs\sources\Samples\Sample-Slam"; DestDir: "{app}\sources\Samples\Sample-Slam"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\Samples\Slam"
+Source: ".\installeurs\sources\Samples\Sample-Triangulation"; DestDir: "{app}\sources\Samples\Sample-Triangulation"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\Samples\Triangulation"
+
+Source: ".\installeurs\build-scripts\*"; DestDir: "{app}\build-scripts"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "buildscripts"
+
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
