@@ -86,7 +86,7 @@ Source: ".\installeurs\sources\Samples\FiducialMarker\*"; DestDir: "{app}\source
 Source: ".\installeurs\sources\Samples\NaturalImageMarker\*"; DestDir: "{app}\sources\Samples\NaturalImageMarker"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\Samples\NaturalImage"
 Source: ".\installeurs\sources\Samples\Sample-Slam\*"; DestDir: "{app}\sources\Samples\Sample-Slam"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\Samples\Slam"
 Source: ".\installeurs\sources\Samples\Sample-Triangulation\*"; DestDir: "{app}\sources\Samples\Sample-Triangulation"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "sources\Samples\Triangulation"
-Source: ".\installeurs\build-scripts"; DestDir: "{app}\build-scripts\*"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "buildscripts"
+Source: ".\installeurs\build-scripts\*"; DestDir: "{app}\build-scripts"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "buildscripts"
 Source: ".\installeurs\Samples\*"; DestDir: "{app}\Samples"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "samples"
 Source: ".\installeurs\Samples\FiducialMarker\*"; DestDir: "{app}\Samples\FiducialMarker"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "samples\FiducialMarker"
 Source: ".\installeurs\Samples\NaturalImage\*"; DestDir: "{app}\Samples\NaturalImage"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "samples\NaturalImage"
