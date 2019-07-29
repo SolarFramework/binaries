@@ -7,8 +7,8 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{04CC0EF2-35C2-4E1E-9DAD-2F34B67F6273}
 AppName=SolARFramework
-AppVersion=0.5.2
-;AppVerName=SolARFramework 0.5.2
+AppVersion=0.6.0
+;AppVerName=SolARFramework 0.6.0
 AppPublisher=b<>com
 AppPublisherURL=http://www.b-com.com/
 AppSupportURL=http://www.b-com.com/
@@ -73,7 +73,6 @@ Source: ".\installeurs\SolARLibraries\bcomBuild\*"; DestDir: "{app}\SolARLibrari
 Source: ".\installeurs\SolARLibraries\.xpcf\*"; DestDir: "{app}\SolARLibraries\.xpcf\"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "SolARlibraries samples samples\FiducialMarker samples\NaturalImage samples\Triangulation samples\Slam "
 Source: ".\installeurs\forQT-only\Setup_pkg-config.exe"; DestDir: "{app}\uninst"; AfterInstall: RunOtherInstaller; Components: "QTinstallation"
 Source: ".\installeurs\forQT-only\pkg-config_Uninstall.exe"; DestDir: "{app}\uninst"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "QTinstallation"
-Source: ".\installeurs\builddefs\*"; DestDir: "{app}\SolARLibraries\builddefs"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "QTinstallation"
 Source: ".\installeurs\thirdParties\*"; DestDir: "{app}\SolARLibraries\thirdParties"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties"
 Source: ".\installeurs\thirdParties\boost\*"; DestDir: "{app}\SolARLibraries\thirdParties\boost"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties\boost"
 Source: ".\installeurs\thirdParties\ceres\*"; DestDir: "{app}\SolARLibraries\thirdParties\ceres"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: "ThirdParties\ceres"
@@ -113,10 +112,6 @@ Source: ".\installeurs\Samples\fbow_voc\*"; DestDir: "{app}\Samples\fbow_voc"; F
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
-; Regitry keys that will be created
-[Registry]
-Root: HKCU; Subkey: "Environment"; ValueType:string; ValueName: "BCOMDEVROOT"; ValueData:{code:bcomdevrootPath}; Flags: uninsdeletekey
-
 ; to be run during uninstallation
 [UninstallRun]
 Filename: "{app}\uninst\pkg-config_Uninstall.exe"; Components: "QTinstallation"
@@ -145,10 +140,4 @@ begin
   then
     MsgBox('Other installer failed to run!' + #13#10 +
       SysErrorMessage(ResultCode), mbError, MB_OK);
-end;
-
-function bcomdevrootPath(Value: string): string;
-begin
-  Result := ExpandConstant('{app}/SolARLibraries');
-  StringChangeEx(Result, '\', '/', True);
 end;
